@@ -24,7 +24,7 @@ pipeline {
 	                    
                              git commit -m "update changes"
 		             git pull
-		            git push -u origin master
+		            git push origin main
 		     
 	               '''
 		   
