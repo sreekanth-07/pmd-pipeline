@@ -14,8 +14,9 @@ pipeline {
            
                     bat '''
 		              
-			     echo 'test' >> sample.properties
+			    
 		             git checkout main
+			      echo 'test' >> sample.properties
 		              dir
 			     git branch 
 	                     git status
