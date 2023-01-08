@@ -22,7 +22,7 @@ pipeline {
 	                    
                              git commit -m "update changes"
 		             git pull
-		            git push origin main
+		            git push https://github.com/sreekanth-07/pmd-pipeline.git main
 		     
 	               '''
 		   
