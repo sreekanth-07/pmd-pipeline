@@ -10,13 +10,13 @@ pipeline {
 //      }
       stage("git-push") {
                steps {
-	       		withCredentials([gitUsernamePassword(credentialsId: 'sreekanth-jenkins-git', gitToolName: 'Default')]) {
+	       		
            
                     bat '''
-		             // git config --global user.email "kallepusreekanth7@gmail.com"
+		              // git config --global user.email "kallepusreekanth7@gmail.com"
                              // git config --global user.name "sreekanthtsb"
-		     
-			     // cd C:\\Users\\002XJB744\\Documents\\check
+		             // cd C:\\Users\\002XJB744\\Documents\\check
+			     echo 'test' >> sample.properties
 		             git branch -a
 		            
 			     git add .
@@ -27,7 +27,7 @@ pipeline {
 		            git push -u origin master
 		     
 	               '''
-		   }
+		   
         }
     
   }
