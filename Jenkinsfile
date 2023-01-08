@@ -16,14 +16,15 @@ pipeline {
 		              
 			    
 		             git checkout main
-			      echo 'test' >> sample.properties
+			      git pull
+			      echo 'india' >> sample.properties
 		              dir
 			     git branch 
 	                     git status
 	                     git add .
                              git status
 			    git commit -m "update changes"
-			    git pull
+			   
 			    git push https://github.com/sreekanth-07/pmd-pipeline.git main
 		     
 	               '''
