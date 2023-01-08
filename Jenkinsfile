@@ -16,12 +16,12 @@ pipeline {
 		              
 			     echo 'test' >> sample.properties
 		             git checkout main
-		            git pull
+		            
 			     git add .
 			     git status
 	                    
                              git commit -m "update changes"
-		             
+		             git pull
 		            git push origin main
 		     
 	               '''
