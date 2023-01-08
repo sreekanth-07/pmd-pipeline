@@ -16,7 +16,7 @@ pipeline {
 		              
 			     echo 'test' >> sample.properties
 		             git checkout main
-		             pwd
+		              dir
 			     git branch 
 	                     git status
 	                     git add .
