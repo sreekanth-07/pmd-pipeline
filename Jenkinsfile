@@ -30,7 +30,7 @@ pipeline {
                         sh '''
                         echo $token
                         pwd
-                        curl -F file=@sample.txt -F "initial_comment=Automation results" -F channels=pmd -H "Authorization: Bearer $token" https://slack.com/api/files.upload
+                        curl -F file=@sample.txt -F "initial_comment=Automation results" -F channels=#pmd -H "Authorization: Bearer $token" https://slack.com/api/files.upload
                         '''
                     }
                 }
