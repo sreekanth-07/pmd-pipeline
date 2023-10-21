@@ -15,9 +15,9 @@ pipeline {
                 script {
                     // Read the content of the file
                     sh 'echo "inside gradle stage"'
-                    pwd
+                    sh "pwd"
                     def fileContent = readFile './sample.txt'
-                    sh ""pwd
+                    sh "pwd"
                     // Print the content
                     echo fileContent
                 }
