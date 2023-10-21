@@ -25,7 +25,7 @@ pipeline {
             stage('slackSend'){
                 steps {
                 //def slackChannel = "pmd"
-                    slackSend (channel: "pmd", color: '#00FF00', message: "PMD Scan started: Job '${1} [${2}]'")
+                    slackSend (channel: "#pmd", color: '#00FF00', message: "PMD Scan started: Job '${1} [${2}]'")
                     withCredentials([string(credentialsId: 'token', variable: 'token')]) {
                         sh '''
                         echo $token
