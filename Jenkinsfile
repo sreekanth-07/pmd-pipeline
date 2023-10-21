@@ -11,6 +11,14 @@ pipeline {
                         sh "pwd"
                         // Print the content
                         echo fileContent
+
+                        sh """
+                        sed -i "/aaa-bbb-ccc/d" sample.txt
+                        cat sample.txt
+                        echo "bbb-ccc-ddd:21-10-2023-09-14" >> sample.txt
+                        cat sample.txt
+                        """
+                        echo fileContent
                     }
                 }
             }
