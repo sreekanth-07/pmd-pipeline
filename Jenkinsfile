@@ -18,7 +18,6 @@ pipeline {
                         echo "bbb-ccc-ddd:21-10-2023-09-14" >> sample.txt
                         cat sample.txt
                         """
-                        echo fileContent
                     }
                 }
             }
