@@ -25,12 +25,12 @@ pipeline {
             stage('slackSend'){
                 steps {
                 //def slackChannel = "pmd"
-                    slackSend (channel: "#pmd", color: '#00FF00', message: "PMD Scan started: Job '${1} [${2}]'")
+                    slackSend (channel: "#zipfileupload", color: '#00FF00', message: "PMD Scan started: Job '${1} [${2}]'")
                     withCredentials([string(credentialsId: 'token', variable: 'token')]) {
                         sh '''
                         echo $token
                         pwd
-                        curl -F file=@sample.txt -F "initial_comment=Automation results" -F channels=#pmd -H "Authorization: Bearer $token" https://slack.com/api/files.upload
+                        curl -F file=@sample.txt -F "initial_comment=Automation results" -F channels=#zipfileupload -H "Authorization: Bearer $token" https://slack.com/api/files.upload
                         '''
                     }
                 }
