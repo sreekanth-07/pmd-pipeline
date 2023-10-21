@@ -12,9 +12,9 @@ pipeline {
                         // Print the content
                         echo fileContent
 
+                        //Replacing microservice and imagetag with latest version
                         sh """
-                        //sed -i "/aaa-bbb-ccc/d" sample.txt
-                        sed -i "/aaa-bbb-ccc" sample.txt
+                        sed -i "/aaa-bbb-ccc/d" sample.txt
                         cat sample.txt
                         echo "bbb-ccc-ddd:21-10-2023-09-14" >> sample.txt
                         cat sample.txt
