@@ -4,6 +4,8 @@ pipeline {
             stage('Access File') {
                 steps {
                     script {
+                        // Clones the repository to the workspace
+		                git url: "https://github.com/sreekanth-07/pmd.git"
                         // Read the content of the file
                         sh 'echo "inside gradle stage"'
                         sh "pwd"
